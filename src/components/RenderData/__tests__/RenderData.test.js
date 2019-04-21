@@ -4,10 +4,10 @@ import { mount } from 'enzyme';
 
 describe('RenderData', () => {
   it('should render component', () => {
-    const MountedRatingItem = mount(
+    const MountedRenderData = mount(
       <RenderData />,
     );
-    const expected = MountedRatingItem.exists();
+    const expected = MountedRenderData.exists();
     const result = true;
     expect(expected).toEqual(result);
   });

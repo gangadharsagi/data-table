@@ -1,12 +1,11 @@
 import 'jsdom-global/register';
 import React from 'react';
-import Enzyme, {mount, shallow} from 'enzyme';
-import sinon from 'sinon';
+import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import {DataTable} from "../DataTable";
-import {COLS} from "../../../constants/COLS";
-import {DATA} from "../../../constants/DATA";
-import {RenderData} from "../../RenderData";
+import { DataTable } from '../DataTable';
+import { COLS } from '../../../constants/COLS';
+import { DATA } from '../../../constants/DATA';
+
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('DataTable', () => {
@@ -15,10 +14,10 @@ describe('DataTable', () => {
       cols: COLS,
       data: DATA,
     };
-    const MountedRating = shallow(
-      <DataTable {...mockProps}/>,
+    const MountedDataTable = shallow(
+      <DataTable {...mockProps} />,
     );
-    const expected = MountedRating.exists();
+    const expected = MountedDataTable.exists();
     const result = true;
     expect(expected).toEqual(result);
   });

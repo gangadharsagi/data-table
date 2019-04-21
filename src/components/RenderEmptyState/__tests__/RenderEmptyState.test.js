@@ -1,8 +1,9 @@
 import 'jsdom-global/register';
 import * as React from 'react';
 import { RenderEmptyState } from '../RenderEmptyState';
-import Enzyme, {mount, shallow} from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('RenderEmptyState', () => {
@@ -10,10 +11,10 @@ describe('RenderEmptyState', () => {
     const mockProps = {
       cols: {},
     };
-    const MountedReviewRating = mount(
+    const MountedRenderEmptyState = mount(
       <RenderEmptyState {...mockProps} />,
     );
-    const expected = MountedReviewRating.exists();
+    const expected = MountedRenderEmptyState.exists();
     const result = true;
     expect(expected).toEqual(result);
   });
