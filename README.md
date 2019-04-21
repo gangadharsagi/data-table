@@ -5,7 +5,7 @@
 It allows user to render the table with user provided data.
 
 ###### Sample Screen:
-![Phase 2](docs/sample.PNG)
+![Data Table](docs/sample.png)
 
 ### Get it running
 
